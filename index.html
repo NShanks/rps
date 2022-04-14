@@ -4,62 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js-file.js" defer></script>
 </head>
 <body>
-    <script>
+<h1>Select an option and the computer will select theirs.</h1>
+<div id="options">
+    <button id="1">Rock</button>
+    <button id="2">Paper</button>
+    <button id="3">Scissors</button>
+</div>
+<p></p>
+<div id="instructions"></div>
+<!-- const textEdits = document.querySelector('#instructions'); in the java file places the selector textEdits -->
+<!-- inside the div here and when ELEMENTS get APPENDed to it, we see them. -->
 
-        let computerSelection;
-        let playerSelection;
-        let options = ['rock', 'paper', 'scissors'];
-        let computerWin = 0;
-        let playerWin = 0;
-
-            function playRound(a, b){
-                console.log('computer selects ' + b)
-                console.log('player selects ' + a)
-                if (a === 'rock' && b === 'scissors') {
-                    console.log('Player Win!!')
-                    ++playerWin;
-                    console.log('Player wins: ' + playerWin)
-                    console.log('Computer wins: ' + computerWin)
-                    return playerWin;
-                } else if (a === 'paper' && b === 'rock'){
-                    console.log('Player Win!!')
-                    ++playerWin;
-                    console.log('Player wins: ' + playerWin)
-                    console.log('Computer wins: ' + computerWin)
-                    return playerWin;
-                } else if (a === 'scissors' && b === 'paper'){
-                    console.log('Player Win!!')
-                    ++playerWin;
-                    console.log('Player wins: ' + playerWin)
-                    console.log('Computer wins: ' + computerWin)
-                    return playerWin;
-                } else if (a === b){
-                    console.log('Tie Game!!')
-                    console.log('Player wins: ' + playerWin)
-                    console.log('Computer wins: ' + computerWin)
-                } else {
-                    console.log('Computer Win!!')
-                    ++computerWin;
-                    console.log('Player wins: ' + playerWin)
-                    console.log('Computer wins: ' + computerWin)
-                    return computerWin;
-                }
-            }
-            function game(){
-                computerSelection = (options[Math.floor(Math.random() * options.length)]);
-                playerSelection = prompt("rock, paper or scissors?").toLowerCase();
-                playRound(playerSelection, computerSelection);
-            }
-
-            for (let gameCount = 0; gameCount < 5; gameCount++){
-                game();
-            }
-            
-
-
-    </script>
 </body>
 </html>
